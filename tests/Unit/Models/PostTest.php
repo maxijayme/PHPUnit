@@ -23,4 +23,13 @@ class PostTest extends TestCase
         $post->name = "Maxi Jayme";
         self::assertEquals('maxi-jayme', $post->slug);
     }
+
+    //Metodo personalizado
+    public function test_href()
+    {
+        $post = new Post;
+        $post->name = "New Post";
+
+        self::assertEquals('blog/new-post', $post->href());
+    }
 }

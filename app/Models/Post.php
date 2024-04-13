@@ -23,6 +23,8 @@ class Post extends Model
         return Str::slug($this->name);
     }
 
-
+    public function href() {
+        return 'blog/'.Str::slug($this->name);
+    }
 
 }
